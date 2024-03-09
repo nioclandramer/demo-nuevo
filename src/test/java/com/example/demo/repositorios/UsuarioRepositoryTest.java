@@ -31,7 +31,7 @@ class UsuarioRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("pertruz noximiliem")
                 .nombres("non")
                 .password("1234")
-                .rep_password("1234")
+                .repPassword("1234")
                 .username("bbx")
                 .enabled(false)
                 .build();
@@ -52,7 +52,7 @@ class UsuarioRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("pertruz noximiliem")
                 .nombres("non")
                 .password("1234")
-                .rep_password("1234")
+                .repPassword("1234")
                 .username("bbx")
                 .enabled(false)
                 .build();
@@ -67,7 +67,7 @@ class UsuarioRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("canaval torres")
                 .nombres("jose armando")
                 .password("4321")
-                .rep_password("4321")
+                .repPassword("4321")
                 .username("xbb")
                 .enabled(true)
                 .build();
@@ -90,7 +90,7 @@ class UsuarioRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("pertruz noximiliem")
                 .nombres("non")
                 .password("1234")
-                .rep_password("1234")
+                .repPassword("1234")
                 .username("bbx")
                 .enabled(false)
                 .build();
@@ -112,7 +112,7 @@ class UsuarioRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("pertruz")
                 .nombres("non")
                 .password("1234")
-                .rep_password("1234")
+                .repPassword("1234")
                 .username("bbx")
                 .enabled(false)
                 .build();
@@ -137,7 +137,7 @@ class UsuarioRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("guitierrez")
                 .nombres("alfredo")
                 .password("1234")
-                .rep_password("1234")
+                .repPassword("1234")
                 .username("bbx")
                 .enabled(false)
                 .build();

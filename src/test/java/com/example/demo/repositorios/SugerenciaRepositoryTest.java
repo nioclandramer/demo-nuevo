@@ -2,7 +2,7 @@ package com.example.demo.repositorios;
 
 import com.example.demo.AstractIntegrationBDTest;
 import com.example.demo.objetos.Usuario;
-import com.example.demo.objetos.sugerencias;
+import com.example.demo.objetos.Sugerencia;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SugerenciaRepositoryTest extends AstractIntegrationBDTest {
     SugerenciaRepository sugerenciaRepository;
@@ -42,18 +41,18 @@ class SugerenciaRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("pertruz noximiliem")
                 .nombres("non")
                 .password("1234")
-                .rep_password("1234")
+                .repPassword("1234")
                 .username("bbx")
                 .enabled(false)
                 .build();
         usuarioRepository.save(usuario);
-        sugerencias sugerencia= new sugerencias();
+        Sugerencia sugerencia= new Sugerencia();
         sugerencia.setDescripcion("muy buena");
         sugerencia.setUsuario(usuario);
-        sugerencia.setCreate_at(LocalDateTime.now());
+        sugerencia.setCreateAt(LocalDateTime.now());
 
         //when
-        sugerencias sugerenciaSaved=sugerenciaRepository.save(sugerencia);
+        Sugerencia sugerenciaSaved=sugerenciaRepository.save(sugerencia);
         //then
         assertThat(sugerenciaSaved.getId()).isNotNull();
         assertThat(sugerenciaSaved.getDescripcion()).isEqualTo("muy buena");
@@ -70,15 +69,15 @@ class SugerenciaRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("pertruz noximiliem")
                 .nombres("non")
                 .password("1234")
-                .rep_password("1234")
+                .repPassword("1234")
                 .username("bbx")
                 .enabled(false)
                 .build();
         usuarioRepository.save(usuario);
-        sugerencias sugerencia= new sugerencias();
+        Sugerencia sugerencia= new Sugerencia();
         sugerencia.setDescripcion("muy buena");
         sugerencia.setUsuario(usuario);
-        sugerencia.setCreate_at(LocalDateTime.now());
+        sugerencia.setCreateAt(LocalDateTime.now());
 
         sugerenciaRepository.save(sugerencia);
 
@@ -90,18 +89,18 @@ class SugerenciaRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("pertruz noximiliem")
                 .nombres("non")
                 .password("1234")
-                .rep_password("1234")
+                .repPassword("1234")
                 .username("bbx")
                 .enabled(false)
                 .build();
         usuarioRepository.save(usuario2);
-        sugerencias sugerencia2= new sugerencias();
+        Sugerencia sugerencia2= new Sugerencia();
         sugerencia2.setDescripcion("muy buena");
         sugerencia2.setUsuario(usuario2);
-        sugerencia2.setCreate_at(LocalDateTime.now());
+        sugerencia2.setCreateAt(LocalDateTime.now());
         sugerenciaRepository.save(sugerencia2);
         //When
-        List<sugerencias> sugerenciaALL= sugerenciaRepository.findAll();
+        List<Sugerencia> sugerenciaALL= sugerenciaRepository.findAll();
         //then
         assertThat(sugerenciaALL).isNotEmpty();
         assertThat(sugerenciaALL).hasSize(2);
@@ -117,15 +116,15 @@ class SugerenciaRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("pertruz noximiliem")
                 .nombres("non")
                 .password("1234")
-                .rep_password("1234")
+                .repPassword("1234")
                 .username("bbx")
                 .enabled(false)
                 .build();
         usuarioRepository.save(usuario);
-        sugerencias sugerencia= new sugerencias();
+        Sugerencia sugerencia= new Sugerencia();
         sugerencia.setDescripcion("muy buena");
         sugerencia.setUsuario(usuario);
-        sugerencia.setCreate_at(LocalDateTime.now());
+        sugerencia.setCreateAt(LocalDateTime.now());
 
         sugerenciaRepository.save(sugerencia);
         //when
@@ -144,15 +143,15 @@ class SugerenciaRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("pertruz noximiliem")
                 .nombres("non")
                 .password("1234")
-                .rep_password("1234")
+                .repPassword("1234")
                 .username("bbx")
                 .enabled(false)
                 .build();
         usuarioRepository.save(usuario);
-        sugerencias sugerencia= new sugerencias();
+        Sugerencia sugerencia= new Sugerencia();
         sugerencia.setDescripcion("muy buena");
         sugerencia.setUsuario(usuario);
-        sugerencia.setCreate_at(LocalDateTime.now());
+        sugerencia.setCreateAt(LocalDateTime.now());
         sugerenciaRepository.save(sugerencia);
         //When
         sugerencia.setDescripcion("muy mala");

@@ -12,18 +12,15 @@ import lombok.Setter;
 @Table
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class mensajes {
+@NoArgsConstructor
+public class Sugerencia {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    private String creador;
-    private String destinatario;
-    private LocalDateTime create_at;
-    private String contenido;
+    private String descripcion;
+    private LocalDateTime createAt;
     @ManyToOne
     @JoinColumn(name = "usuario_ID")
-
     private Usuario usuario;
 }

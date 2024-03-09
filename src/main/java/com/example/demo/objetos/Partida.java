@@ -14,7 +14,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class partidas {
+public class Partida {
   @Id
   @GeneratedValue(strategy=GenerationType.IDENTITY)
   private Long id;
@@ -23,8 +23,8 @@ public class partidas {
   private String ciudad;
   private String provincia;
   private LocalDateTime fecha;
-  private LocalDateTime hora_Comienzo;
-  private LocalDateTime hora_final;
+  private LocalDateTime horaComienzo;
+  private LocalDateTime horaFinal;
   private Integer participantes;
   private Integer suplentes;
   private String comentario;

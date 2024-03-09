@@ -25,17 +25,17 @@ public class Usuario {
     private String apellidos;
     private Integer edad;
     private String password;
-    private String rep_password;
+    private String repPassword;
     private Boolean enabled;
     private String foto;
     private String rol;
-    private LocalDateTime create_at;
+    private LocalDateTime createAt;
     @OneToMany(mappedBy = "usuario")
-    private List<mensajes> ensajes;
+    private List<Mensaje> ensajes;
     @OneToMany(mappedBy = "usuario")
-    private List<sugerencias> ugerencias;
+    private List<Sugerencia> ugerencias;
     @ManyToMany(mappedBy = "usuario")
-    private List<partidas> partidas = new ArrayList<>();
+    private List<Partida> Partida = new ArrayList<>();
 
     
 }

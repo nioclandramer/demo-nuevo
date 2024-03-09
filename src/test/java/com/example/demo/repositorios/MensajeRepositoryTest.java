@@ -2,7 +2,7 @@ package com.example.demo.repositorios;
 
 import com.example.demo.AstractIntegrationBDTest;
 import com.example.demo.objetos.Usuario;
-import com.example.demo.objetos.mensajes;
+import com.example.demo.objetos.Mensaje;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class MensajeRepositoryTest extends AstractIntegrationBDTest {
     MensajeRepository mensajeRepository;
@@ -38,20 +37,20 @@ class MensajeRepositoryTest extends AstractIntegrationBDTest {
                 .apellidos("pertruz noximiliem")
                 .nombres("non")
                 .password("1234")
-                .rep_password("1234")
+                .repPassword("1234")
                 .username("bbx")
                 .enabled(false)
                 .build();
         usuarioRepository.save(usuario);
 
-        mensajes mensaje = new mensajes();
-        mensaje.setCreate_at(LocalDateTime.now());
+        Mensaje mensaje = new Mensaje();
+        mensaje.setCreateAt(LocalDateTime.now());
         mensaje.setContenido("Hola mundo");
         mensaje.setCreador("bbx");
         mensaje.setUsuario(usuario);
         mensaje.setDestinatario("xbb");
         //when
-        mensajes msgCreado =mensajeRepository.save(mensaje);
+        Mensaje msgCreado =mensajeRepository.save(mensaje);
         //then
         assertThat(msgCreado).isNotNull();
         assertThat(msgCreado.getContenido()).isEqualTo("Hola mundo");
@@ -67,14 +66,14 @@ class MensajeRepositoryTest extends AstractIntegrationBDTest {
                     .apellidos("pertruz noximiliem")
                     .nombres("non")
                     .password("1234")
-                    .rep_password("1234")
+                    .repPassword("1234")
                     .username("bbx")
                     .enabled(false)
                     .build();
         usuarioRepository.save(usuario);
 
-        mensajes mensaje = new mensajes();
-        mensaje.setCreate_at(LocalDateTime.now());
+        Mensaje mensaje = new Mensaje();
+        mensaje.setCreateAt(LocalDateTime.now());
         mensaje.setContenido("Hola mundo");
         mensaje.setCreador("bbx");
         mensaje.setUsuario(usuario);
@@ -89,14 +88,14 @@ class MensajeRepositoryTest extends AstractIntegrationBDTest {
                     .apellidos("pertruz noximiliem")
                     .nombres("non")
                     .password("1234")
-                    .rep_password("1234")
+                    .repPassword("1234")
                     .username("bbx")
                     .enabled(false)
                     .build();
         usuarioRepository.save(usuario2);
 
-        mensajes mensaje2 = new mensajes();
-        mensaje2.setCreate_at(LocalDateTime.now());
+        Mensaje mensaje2 = new Mensaje();
+        mensaje2.setCreateAt(LocalDateTime.now());
         mensaje2.setContenido("Adios mundo");
         mensaje2.setCreador("xbb");
         mensaje2.setUsuario(usuario2);
@@ -104,7 +103,7 @@ class MensajeRepositoryTest extends AstractIntegrationBDTest {
         mensajeRepository.save(mensaje2);
 
         //When
-            List<mensajes> mensajeALL= mensajeRepository.findAll();
+            List<Mensaje> mensajeALL= mensajeRepository.findAll();
         //then
         assertThat(mensajeALL).isNotEmpty();
         assertThat(mensajeALL).hasSize(2);
@@ -120,14 +119,14 @@ class MensajeRepositoryTest extends AstractIntegrationBDTest {
                     .apellidos("pertruz noximiliem")
                     .nombres("non")
                     .password("1234")
-                    .rep_password("1234")
+                    .repPassword("1234")
                     .username("bbx")
                     .enabled(false)
                     .build();
             usuarioRepository.save(usuario2);
 
-            mensajes mensaje2 = new mensajes();
-            mensaje2.setCreate_at(LocalDateTime.now());
+            Mensaje mensaje2 = new Mensaje();
+            mensaje2.setCreateAt(LocalDateTime.now());
             mensaje2.setContenido("Adios mundo");
             mensaje2.setCreador("xbb");
             mensaje2.setUsuario(usuario2);
@@ -149,14 +148,14 @@ class MensajeRepositoryTest extends AstractIntegrationBDTest {
                     .apellidos("pertruz noximiliem")
                     .nombres("non")
                     .password("1234")
-                    .rep_password("1234")
+                    .repPassword("1234")
                     .username("bbx")
                     .enabled(false)
                     .build();
             usuarioRepository.save(usuario2);
 
-            mensajes mensaje2 = new mensajes();
-            mensaje2.setCreate_at(LocalDateTime.now());
+            Mensaje mensaje2 = new Mensaje();
+            mensaje2.setCreateAt(LocalDateTime.now());
             mensaje2.setContenido("Adios mundo");
             mensaje2.setCreador("xbb");
             mensaje2.setUsuario(usuario2);
