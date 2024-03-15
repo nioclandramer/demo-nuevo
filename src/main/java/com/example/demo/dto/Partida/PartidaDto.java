@@ -1,6 +1,6 @@
 package com.example.demo.dto.Partida;
 
-import com.example.demo.dto.Usuario.UsuarrioDto;
+import com.example.demo.dto.Usuario.UsuarioDto;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -20,5 +20,5 @@ public class PartidaDto {
     private Integer suplentes;
     private String comentario;
 
-    private List<UsuarrioDto> usuarios;
+    private List<UsuarioDto> usuarios;
 }
