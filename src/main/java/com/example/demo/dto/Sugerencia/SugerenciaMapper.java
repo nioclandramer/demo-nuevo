@@ -9,4 +9,5 @@ public interface SugerenciaMapper {
     SugerenciaMapper INSTANCE= Mappers.getMapper(SugerenciaMapper.class);
 
     SugerenciaDto sugerenciaToDto(Sugerencia sugerencia);
+    Sugerencia dtoTosugerencia(SugerenciaDto dto);
 }

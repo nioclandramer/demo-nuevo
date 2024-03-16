@@ -4,7 +4,6 @@ import com.example.demo.AstractIntegrationBDTest;
 
 import com.example.demo.objetos.Mensaje;
 import com.example.demo.objetos.Usuario;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
@@ -14,6 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MensajeMapperTest extends AstractIntegrationBDTest {
+
     MensajeMapper mensajeMapper=MensajeMapper.INSTANCE;
     @Test
     void mapMensajeToDto (){

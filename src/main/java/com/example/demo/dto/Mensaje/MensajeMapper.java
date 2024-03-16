@@ -9,4 +9,5 @@ public interface MensajeMapper {
     MensajeMapper INSTANCE= Mappers.getMapper(MensajeMapper.class);
 
     MensajeDto mensajeToDto(Mensaje mensaje);
+    Mensaje dtoToMensaje(MensajeDto dto);
 }

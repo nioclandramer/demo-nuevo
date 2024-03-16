@@ -9,4 +9,5 @@ public interface PartidaMapper {
     PartidaMapper INSTANCE= Mappers.getMapper(PartidaMapper.class);
 
     PartidaDto partidaToDto(Partida partida);
+    Partida dtoToPartida(PartidaDto dto);
 }
