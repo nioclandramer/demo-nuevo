@@ -27,8 +27,23 @@ public class UsuarioServiceIMPL implements UsuarioService{
 
     @Override
     public UsuarioDto actualizarUsuario(UsuarioToSaveDto usuario) {
-        return null;
+        Usuario usuario1=UsuarioMapper.INSTANCE.toEntity(usuario);
+        Usuario usuarioExistente=usuarioRepository.findById(usuario.id()).orElseThrow(()-> new UsuarioNotFoundException("usuario no encontrado"));
+        usuarioExistente.setNombres(usuario1.getNombres());
+        usuarioExistente.setApellidos(usuario1.getApellidos());
+        usuarioExistente.setEdad(usuario1.getEdad());
+        usuarioExistente.setEmail(usuario1.getEmail());
+        usuarioExistente.setFoto(usuario1.getFoto());
+        usuarioExistente.setPassword(usuario1.getPassword());
+        usuarioExistente.setRepPassword(usuarioExistente.getRepPassword());
+        usuarioExistente.setUsername(usuario1.getUsername());
+        usuarioExistente.setEnabled(usuario1.getEnabled());
+        usuarioExistente.setRol(usuario1.getRol());
+        usuarioExistente=usuarioRepository.save(usuarioExistente);
+        return UsuarioMapper.INSTANCE.usuarioToDto(usuarioExistente);
     }
+
+
 
     @Override
     public UsuarioDto findUsuarioByid(long id) throws UsuarioNotFoundException {
