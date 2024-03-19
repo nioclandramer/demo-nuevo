@@ -11,5 +11,5 @@ public interface MensajeService {
     MensajeDto guardarMensaje(MensajeToSaveDto mensaje);
     MensajeDto actualizarMensaje(MensajeToSaveDto mensaje);
     MensajeDto findById(long id)throws MensajeNotFoundException;
-    List<MensajeDto> findByUsuario(UsuarioToSaveDto usuario);
+
 }

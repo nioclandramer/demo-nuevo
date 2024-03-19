@@ -11,6 +11,5 @@ public interface SugerenciaService {
     SugerenciaDto guardarSugerencia(SugerenciasToSaveDto sugerencia);
     SugerenciaDto actualizarSugerencia(SugerenciasToSaveDto sugerencia);
     SugerenciaDto findById(long id)throws SugerenciaNotFoundException;
-    List<SugerenciaDto> findByUsuario(UsuarioToSaveDto usuario);
 
 }

@@ -10,4 +10,6 @@ public interface SugerenciaMapper {
 
     SugerenciaDto sugerenciaToDto(Sugerencia sugerencia);
     Sugerencia dtoTosugerencia(SugerenciaDto dto);
+
+    Sugerencia ToEntity(SugerenciasToSaveDto sugerenciaD);
 }

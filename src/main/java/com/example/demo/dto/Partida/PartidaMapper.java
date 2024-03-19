@@ -10,4 +10,6 @@ public interface PartidaMapper {
 
     PartidaDto partidaToDto(Partida partida);
     Partida dtoToPartida(PartidaDto dto);
+
+    Partida ToEntity(PartidaToSaveDto partidaD);
 }

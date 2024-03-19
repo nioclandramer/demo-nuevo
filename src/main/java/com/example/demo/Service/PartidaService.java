@@ -8,5 +8,5 @@ public interface PartidaService {
     PartidaDto guardarPartida(PartidaToSaveDto partida);
     PartidaDto actualizarPartida(PartidaToSaveDto partida);
     PartidaDto findById(long id)throws PartidaNotFoundException;
-    PartidaDto findByCiudad(String Ciudad)throws PartidaNotFoundException;
+    PartidaDto findByCiudad(String ciudad)throws PartidaNotFoundException;
 }
